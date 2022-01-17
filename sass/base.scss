@@ -1,7 +1,11 @@
 :root {
   
 // Color
-  --primary-color: ;
+  --primary-main-color: #2a9e59;
+  --primary-light-color: #62d087;
+  --secondary-main-color: #f48142;
+  --secondary-light-color: #ffb270;
+
 
 // Font size
   --font-large-size: 1.75rem
@@ -22,22 +26,6 @@
 }
 body {
   font-family: 'Work Sans', sans-serif;
-}
-button {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-a {
-  text-decoration: none;
 }
 
 .container {

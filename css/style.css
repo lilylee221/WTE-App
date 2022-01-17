@@ -1,5 +1,8 @@
 :root {
-  --primary-color: ;
+  --primary-main-color: #2a9e59;
+  --primary-light-color: #62d087;
+  --secondary-main-color: #f48142;
+  --secondary-light-color: #ffb270;
   --font-large-size: 1.75rem
   --font-medium-size: 1.5rem;
   --font-regular-size: 1.25rem;
@@ -14,21 +17,6 @@
 
 body {
   font-family: 'Work Sans', sans-serif; }
-
-button {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  padding: 0; }
-
-ul {
-  list-style: none;
-  padding: 0; }
-
-a {
-  text-decoration: none; }
 
 .container {
   max-width: 90%;
@@ -51,8 +39,12 @@ ul {
   list-style: none;
   padding: 0; }
 
-a {
+a:link,
+a:visited {
   text-decoration: none; }
+
+a:hover {
+  cursor: pointer; }
 
 .header {
   background-color: gray;
@@ -106,7 +98,19 @@ a {
     margin-right: 1rem; }
 
 .recipe {
-  height: 100%;
   flex: 1;
   background-color: yellowgreen;
-  padding: var(--basic-padding); }
+  padding: var(--basic-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .recipe__spinner i {
+    font-size: 3rem;
+    color: var(--secondary-main-color);
+    animation: rotate 2s infinite linear; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
