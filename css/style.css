@@ -1,0 +1,112 @@
+:root {
+  --primary-color: ;
+  --font-large-size: 1.75rem
+  --font-medium-size: 1.5rem;
+  --font-regular-size: 1.25rem;
+  --font-small-size: 1rem;
+  --font-micro-size: 0.75rem;
+  --basic-padding: 1rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Work Sans', sans-serif; }
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 0; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  max-width: 90%;
+  min-height: 80rem;
+  margin: auto; }
+
+main {
+  display: flex;
+  flex-direction: row; }
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 0; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem; }
+  .header__logo {
+    display: flex;
+    align-items: center; }
+    .header__logo__img {
+      width: 3rem; }
+    .header__logo__text {
+      font-size: 2rem; }
+  .header__search {
+    flex: 0 0 30%;
+    font-size: var(--font-medium-size); }
+    .header__search__input {
+      width: 70%;
+      height: 3rem;
+      border-radius: 10px;
+      font-size: inherit;
+      padding: 0.5rem; }
+    .header__search__btn {
+      font-size: inherit; }
+  .header__actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    .header__actions button {
+      font-size: var(--font-medium-size); }
+    .header__actions__add-recipe {
+      margin-right: 1rem; }
+
+.list {
+  flex: 0 0 30%;
+  background-color: whitesmoke;
+  padding: var(--basic-padding); }
+
+.recipe-list__item {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-size: var(--font-medium-size); }
+  .recipe-list__item__thumbnail {
+    width: 4rem;
+    height: 4rem;
+    background-color: yellow;
+    border-radius: 50px;
+    margin-right: 1rem; }
+
+.recipe {
+  height: 100%;
+  flex: 1;
+  background-color: yellowgreen;
+  padding: var(--basic-padding); }

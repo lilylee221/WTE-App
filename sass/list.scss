@@ -1,0 +1,21 @@
+.list {
+  flex: 0 0 30%;
+  background-color: whitesmoke;
+  padding: var(--basic-padding);
+}
+.recipe-list {
+  &__item {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: var(--font-medium-size);
+    &__thumbnail {
+      width: 4rem;
+      height: 4rem;
+      background-color: yellow;
+      border-radius: 50px;
+      margin-right: 1rem;
+    }
+  }
+}

@@ -11,7 +11,7 @@
     />
     <meta name="author" content="Lily Lee" />
     <link rel="icon" href="src/img/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +26,7 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="header">
         <div class="header__logo">
           <img
             src="src/img/favicon.png"
@@ -35,7 +35,7 @@
           />
           <span class="header__logo__text">What To Eat?</span>
         </div>
-        <form class="sheader__earch">
+        <form class="header__search">
           <input
             type="text"
             class="header__search__input"
@@ -48,24 +48,33 @@
         </form>
         <ul class="header__actions">
           <li class="header__actions__add-recipe">
-            <button><i class="fas fa-plus"></i>Add Your Recipe</button>
+            <button><i class="fas fa-plus"></i> Add Your Recipe</button>
           </li>
           <li class="header__actions__bookmark">
-            <button><i class="far fa-bookmark"></i>Bookmarks</button>
+            <button><i class="far fa-bookmark"></i> Bookmarks</button>
           </li>
         </ul>
       </header>
       <main>
-        <ul class="recipe-list">
-          <li class="recipe-list__item">
-            <img src="" alt="" class="recipe-list__item__thumbnail" />
-            <div class="recipe-list__item__info">
-              <span class="recipe-list__item__info-title">Kimchi</span>
-              <span class="recipe-list__item__info-author">Lily</span>
-            </div>
-          </li>
-        </ul>
-        <div class="recipe">
+        <section class="list">
+          <ul class="recipe-list">
+            <li class="recipe-list__item">
+              <div class="recipe-list__item__thumbnail"></div>
+              <div class="recipe-list__item__info">
+                <span class="recipe-list__item__info-title">Kimchi</span>
+                <span class="recipe-list__item__info-author">Lily</span>
+              </div>
+            </li>
+            <li class="recipe-list__item">
+              <div class="recipe-list__item__thumbnail"></div>
+              <div class="recipe-list__item__info">
+                <span class="recipe-list__item__info-title">Kimchi</span>
+                <span class="recipe-list__item__info-author">Lily</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="recipe">
           <div class="recipe__header">
             <img src="" alt="" class="recipe__header__img" />
             <span class="recipe__header__title"></span>
@@ -89,13 +98,21 @@
             </div>
           </div>
           <div class="recipe__ingredients">
-            <h3>Recipe Ingredients</h3>
+            <h1>Recipe Ingredients</h1>
             <ul class="recipe__ingredients__list">
               <li class="recipe__ingredients__item"></li>
             </ul>
           </div>
-          <div class="recipe__instructions"></div>
-        </div>
+          <div class="recipe__instructions">
+            <h1>Instructions</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              iusto non labore quia tenetur aliquid, dolores amet optio
+              expedita, pariatur minus, magnam sunt id quasi fugit dolor
+              voluptates neque quod?
+            </p>
+          </div>
+        </section>
       </main>
       <footer></footer>
     </div>

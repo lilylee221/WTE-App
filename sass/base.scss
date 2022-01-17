@@ -1,5 +1,18 @@
 :root {
+  
+// Color
   --primary-color: ;
+
+// Font size
+  --font-large-size: 1.75rem
+  --font-medium-size: 1.5rem;
+  --font-regular-size: 1.25rem;
+  --font-small-size: 1rem;
+  --font-micro-size: 0.75rem;
+
+  //padding
+  --basic-padding: 1rem;
+  
 }
 
 * {
@@ -14,6 +27,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   border: none;
+  border-radius: 10px;
   outline: none;
   padding: 0;
 }
@@ -24,4 +38,15 @@ ul {
 }
 a {
   text-decoration: none;
+}
+
+.container {
+  max-width: 90%;
+  min-height: 80rem;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
 }
