@@ -1,73 +1,50 @@
-class RecipeView {
-  #parentEl = document.querySelector('.recipe');
-  #data;
-  #errorMessage = 'We cannot find such recipe. Please try another one.';
+import View from './view.js';
 
-  render(data) {
-    this.#data = data;
-    const recipeInnerHtml = this.#generateMarkup();
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML('beforeend', recipeInnerHtml);
-  }
-
-  #clear() {
-    this.#parentEl.innerHTML = '';
-  }
-  renderSpinner() {
-    const markup = `
-      <div class="recipe__spinner">
-          <i class="fas fa-spinner"></i>
-    </div>`;
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML('beforeend', markup);
-  }
+class RecipeView extends View {
+  _parentEl = document.querySelector('.recipe');
+  _errorMessage = 'We cannot find such recipe. Please try another one.';
 
   //hash change event listener
   addHandlerRender(handler) {
     window.addEventListener('hashchange', handler);
     window.addEventListener('load', handler);
   }
-  renderError(message = this.#errorMessage) {
-    const markup = `
-      <span class="recipe__error-message"><i class="fas fa-exclamation-triangle"></i>${message}</span>`;
-    this.#clear();
-    this.#parentEl.insertAdjacentHTML('beforeend', markup);
-  }
-  #generateMarkup() {
-    const ingredientsArr = Object.keys(this.#data)
+
+  _generateMarkup() {
+    const ingredientsArr = Object.keys(this._data)
       .filter(
         (key) =>
           key.includes('Ingredient') &&
-          this.#data[key] !== '' &&
-          this.#data[key] !== null
+          this._data[key] !== '' &&
+          this._data[key] !== null
       )
-      .map((k) => this.#data[k]);
+      .map((k) => this._data[k]);
 
-    const measureArr = Object.keys(this.#data)
+    const measureArr = Object.keys(this._data)
       .filter(
         (key) =>
           key.includes('Measure') &&
-          this.#data[key] !== '' &&
-          this.#data[key] !== null
+          this._data[key] !== '' &&
+          this._data[key] !== null
       )
-      .map((k) => this.#data[k]);
+      .map((k) => this._data[k]);
 
     let ingredientAndMeasure = [];
     for (let i = 0; i < ingredientsArr.length; i++) {
       ingredientAndMeasure.push(
-        `<li class="recipe__ingredients__item">${ingredientsArr[i]} - ${measureArr[i]}</li>`
+        `<li class="recipe__ingredients__item">${measureArr[i]} ${ingredientsArr[i]}</li>`
       );
     }
     return ` 
     <img src="${
-      this.#data.strMealThumb
+      this._data.strMealThumb
     }" alt="recipe thumbnail image" class="recipe__img" />
    
     <div class="recipe__info">
         <div="recipe__info__title-and-type">
-            <span class="recipe__info__title">${this.#data.strMeal}</span>
-             <span class="recipe__info__type">${this.#data.strArea}/${
-      this.#data.strCategory
+            <span class="recipe__info__title">${this._data.strMeal}</span>
+             <span class="recipe__info__type">${this._data.strArea}/${
+      this._data.strCategory
     }</span>
         </div>
         <div class="recipe__info__controller">
@@ -91,10 +68,10 @@ class RecipeView {
     <div class="recipe__instructions">
     <h1>Instructions</h1>
     <p>
-        ${this.#data.strInstructions}
+        ${this._data.strInstructions}
     </p>
     <a href="${
-      this.#data.strYoutube
+      this._data.strYoutube
     }" class="recipe__instructions__video" target="_black">Watch How To Cook</a>
   </div>`;
   }

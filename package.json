@@ -4,7 +4,7 @@
   "description": "Recipe finder app",
   "main": "index.html",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.css -w"
   },
   "repository": {
     "type": "git",

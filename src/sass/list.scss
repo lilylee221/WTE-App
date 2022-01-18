@@ -6,16 +6,20 @@
 .recipe-list {
   &__item {
     height: 5rem;
-    display: flex;
-    align-items: center;
     margin: 0.5rem 0;
     font-size: var(--font-medium-size);
-    &__thumbnail {
-      width: 4rem;
-      height: 4rem;
-      background-color: yellow;
+    &__link {
+      display: flex;
+      align-items: center;
+    }
+    &__img {
+      width: 3rem;
+      height: 3rem;
       border-radius: 50px;
       margin-right: 1rem;
+    }
+    &__title {
+      font-size: var(--font-medium-size);
     }
   }
 }
