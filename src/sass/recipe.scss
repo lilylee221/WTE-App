@@ -1,0 +1,40 @@
+.recipe {
+  flex: 1;
+  background-color: yellowgreen;
+  padding: var(--basic-padding);
+  text-align: center;
+
+  &__spinner i {
+    font-size: 3rem;
+    color: var(--secondary-main-color);
+    animation: rotate 2s infinite linear;
+  }
+  &__img {
+    width: 50rem;
+    height: 30rem;
+  }
+  &__ingredients {
+    text-align: center;
+    margin: 2rem;
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item {
+      flex-basis: 50%;
+    }
+  }
+  &__instructions {
+    text-align: center;
+    margin: 4rem 2rem;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
