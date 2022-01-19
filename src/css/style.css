@@ -1,32 +1,40 @@
-:root {
-  --primary-main-color: #a5c2b8;
-  --primary-dark-color: #4f8f78;
-  --primary-light-color: #e8f5e9;
-  --secondary-main-color: #ffa726;
-  --secondary-dark-color: #c8b900;
-  --secondary-light-color: #fffde7;
-  --font-large-size: 1.75rem;
-  --font-medium-size: 1.5rem;
-  --font-regular-size: 1rem;
-  --font-small-size: 0.75rem;
-  --font-micro-size: 0.5rem;
-  --basic-padding: 1rem;
-  --basic-radius: 10px; }
-
-* {
-  margin: 0;
+button {
+  background: var(--primary-light-color);
+  border: none;
+  border-radius: var(--basic-radius);
+  outline: none;
   padding: 0;
-  box-sizing: border-box; }
+  cursor: pointer; }
 
-body {
-  font-family: 'Work Sans', sans-serif; }
+button:hover {
+  transform: translateY(-2px); }
 
-.container {
-  max-width: 80%;
-  min-height: 100vh;
-  margin: 2rem auto; }
+ul {
+  list-style: none;
+  padding: 0; }
 
-main {
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  cursor: pointer; }
+
+.spinner i {
+  font-size: 3rem;
+  color: var(--secondary-main-color);
+  animation: rotate 2s infinite linear; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+.error-message {
+  margin: 1rem 0 0 1rem; }
+ {
   display: flex;
   flex-direction: row; }
 
@@ -45,15 +53,15 @@ i {
   color: var(--secondary-main-color); }
 
 button {
-  background-color: transparent;
-  cursor: pointer;
+  background: var(--primary-light-color);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--basic-radius);
   outline: none;
-  padding: 0; }
+  padding: 0;
+  cursor: pointer; }
 
 button:hover {
-  transform: translateY(-2px) scale(1.03); }
+  transform: translateY(-2px); }
 
 ul {
   list-style: none;
@@ -66,9 +74,6 @@ a:visited {
 
 a:hover {
   cursor: pointer; }
-
-i {
-  color: var(--secondary-main-color); }
 
 .spinner i {
   font-size: 3rem;
@@ -112,8 +117,7 @@ i {
     .header__search__btn {
       width: 5rem;
       height: 2.5rem;
-      font-size: inherit;
-      background-color: var(--primary-light-color); }
+      font-size: inherit; }
   .header__bookmarks {
     font-size: var(--font-regular-size);
     position: relative;
@@ -123,7 +127,8 @@ i {
       visibility: visible; }
     .header__bookmarks__btn {
       font-size: inherit;
-      margin-top: 2.6rem; }
+      margin-top: 2.6rem;
+      background: transparent; }
     .header__bookmarks__content {
       position: absolute;
       width: 20rem;
@@ -145,7 +150,7 @@ i {
     .list__pagination button {
       width: 5rem;
       height: 2rem;
-      background-color: var(--primary-light-color); }
+      border: 1px solid rgba(0, 0, 0, 0.12); }
     .list__pagination__btn--prev {
       position: absolute;
       left: 0; }

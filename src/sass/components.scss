@@ -1,13 +1,13 @@
 button {
-  background-color: transparent;
-  cursor: pointer;
+  background: var(--primary-light-color);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--basic-radius);
   outline: none;
   padding: 0;
+  cursor: pointer;
 }
 button:hover {
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(-2px);
 }
 
 ul {
@@ -21,10 +21,6 @@ a:visited {
 }
 a:hover {
   cursor: pointer;
-}
-
-i {
-  color: var(--secondary-main-color);
 }
 
 .spinner i {

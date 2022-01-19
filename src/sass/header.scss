@@ -33,7 +33,6 @@
       width: 5rem;
       height: 2.5rem;
       font-size: inherit;
-      background-color: var(--primary-light-color);
     }
   }
 
@@ -49,6 +48,7 @@
     &__btn {
       font-size: inherit;
       margin-top: 2.6rem;
+      background: transparent;
     }
 
     &__content {
