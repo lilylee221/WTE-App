@@ -1,22 +1,24 @@
 :root {
-  
-// Color
-  --primary-main-color: #2a9e59;
-  --primary-light-color: #62d087;
-  --secondary-main-color: #f48142;
-  --secondary-light-color: #ffb270;
+  // Color
+  --primary-main-color: #a5c2b8;
+  --primary-dark-color: #4f8f78;
+  --primary-light-color: #e8f5e9;
+  --secondary-main-color: #ffa726;
+  --secondary-dark-color: #c8b900;
+  --secondary-light-color: #fffde7;
 
-
-// Font size
-  --font-large-size: 1.75rem
+  // Font size
+  --font-large-size: 1.75rem;
   --font-medium-size: 1.5rem;
-  --font-regular-size: 1.25rem;
-  --font-small-size: 1rem;
-  --font-micro-size: 0.75rem;
+  --font-regular-size: 1rem;
+  --font-small-size: 0.75rem;
+  --font-micro-size: 0.5rem;
 
   //padding
   --basic-padding: 1rem;
-  
+
+  //border radius
+  --basic-radius: 10px;
 }
 
 * {
@@ -29,12 +31,29 @@ body {
 }
 
 .container {
-  max-width: 90%;
-  min-height: 80rem;
-  margin: auto;
+  max-width: 80%;
+  min-height: 100vh;
+  margin: 2rem auto;
 }
 
 main {
   display: flex;
   flex-direction: row;
+}
+
+h1 {
+  font-size: var(--font-large-size);
+  color: var(--primary-dark-color);
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: var(--font-medium-size);
+  font-weight: 500;
+  color: var(--primary-dark-color);
+  margin-bottom: 2rem;
+}
+
+i {
+  color: var(--secondary-main-color);
 }

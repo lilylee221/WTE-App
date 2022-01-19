@@ -46,55 +46,27 @@
             Search
           </button>
         </form>
-        <ul class="header__actions">
-          <li class="header__actions__add-recipe">
-            <button><i class="fas fa-plus"></i> Add Your Recipe</button>
-          </li>
-          <li class="header__actions__bookmark">
-            <button><i class="far fa-bookmark"></i> Bookmarks</button>
-          </li>
-        </ul>
+        <div class="header__bookmarks">
+          <button class="header__bookmarks__btn">
+            <i class="far fa-bookmark"></i> Bookmarks
+          </button>
+          <div class="header__bookmarks__content">
+            <ul class="header__bookmarks__list">
+              <!-- <p class="header__bookmarks__message">
+                There is not any bookmark yet.
+              </p> -->
+            </ul>
+          </div>
+        </div>
       </header>
       <main>
         <section class="list">
           <ul class="recipe-list"></ul>
+          <div class="list__pagination"></div>
         </section>
         <section class="recipe">
-          <div class="recipe__header">
-            <img src="" alt="" class="recipe__header__img" />
-            <span class="recipe__header__title"></span>
-          </div>
-          <div class="recipe__info">
-            <div class="recipe__info__time-portion">
-              <span class="recipe-__info__time"
-                ><i class="far fa-clock"></i> 30 mins</span
-              >
-              <span class="recipe-__info__portion"
-                ><i class="far fa-user"></i> 2 portions</span
-              >
-            </div>
-            <div class="recipe__info__custom-bookmark">
-              <span class="recipe__info__custom"
-                ><i class="far fa-id-badge"></i
-              ></span>
-              <button class="recipe__info_bookmark">
-                <i class="far fa-bookmark"></i>
-              </button>
-            </div>
-          </div>
-          <div class="recipe__ingredients">
-            <h1>Recipe Ingredients</h1>
-            <ul class="recipe__ingredients__list">
-              <li class="recipe__ingredients__item"></li>
-            </ul>
-          </div>
-          <div class="recipe__instructions">
-            <h1>Instructions</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              iusto non labore quia tenetur aliquid, dolores amet optio
-              expedita, pariatur minus, magnam sunt id quasi fugit dolor
-              voluptates neque quod?
+            <p class="recipe__init-message">
+              Don't know What To Eat today? Get some ideas by searching! <i class="far fa-smile-wink"></i>
             </p>
           </div>
         </section>

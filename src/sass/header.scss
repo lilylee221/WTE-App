@@ -1,9 +1,11 @@
 .header {
-  background-color: gray;
+  background-color: var(--primary-dark-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  height: 6rem;
+  padding: 0 2rem;
+  border-radius: var(--basic-radius) var(--basic-radius) 0 0;
 
   &__logo {
     display: flex;
@@ -17,27 +19,46 @@
   }
 
   &__search {
-    flex: 0 0 30%;
-    font-size: var(--font-medium-size);
+    flex: 0 0 40%;
+    font-size: var(--font-regular-size);
     &__input {
-      width: 70%;
-      height: 3rem;
-      border-radius: 10px;
+      width: 17rem;
+      height: 2.5rem;
+      border: none;
+      border-radius: var(--basic-radius);
       font-size: inherit;
       padding: 0.5rem;
     }
     &__btn {
+      width: 5rem;
+      height: 2.5rem;
       font-size: inherit;
+      background-color: var(--primary-light-color);
     }
   }
 
-  &__actions {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  &__bookmarks {
+    font-size: var(--font-regular-size);
+    position: relative;
+    height: 100%;
+    &:hover &__content,
+    &__content:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+    &__btn {
+      font-size: inherit;
+      margin-top: 2.6rem;
+    }
 
-    button {
-      font-size: var(--font-medium-size);
+    &__content {
+      position: absolute;
+      width: 20rem;
+      background-color: var(--primary-light-color);
+      top: 6rem;
+      right: -2rem;
+      opacity: 0;
+      visibility: hidden;
     }
     &__add-recipe {
       margin-right: 1rem;

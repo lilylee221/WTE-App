@@ -1,13 +1,35 @@
 .list {
   flex: 0 0 30%;
-  background-color: whitesmoke;
-  padding: var(--basic-padding);
+  background-color: var(--primary-light-color);
+  border-radius: 0 0 0 var(--basic-radius);
+  &__pagination {
+    position: relative;
+    margin-bottom: 2rem;
+    & button {
+      width: 5rem;
+      height: 2rem;
+      background-color: var(--primary-light-color);
+    }
+    &__btn--prev {
+      position: absolute;
+      left: 0;
+    }
+    &__btn--next {
+      position: absolute;
+      right: 0;
+    }
+  }
 }
 .recipe-list {
+  margin-bottom: 2rem;
   &__item {
-    height: 5rem;
-    margin: 0.5rem 0;
-    font-size: var(--font-medium-size);
+    padding: 1rem;
+    margin: auto;
+    font-size: var(--font-regular-size);
+
+    &:hover {
+      background-color: var(--primary-main-color);
+    }
     &__link {
       display: flex;
       align-items: center;
@@ -15,11 +37,10 @@
     &__img {
       width: 3rem;
       height: 3rem;
-      border-radius: 50px;
       margin-right: 1rem;
     }
     &__title {
-      font-size: var(--font-medium-size);
+      font-size: var(--font-regular-size);
     }
   }
 }

@@ -10,6 +10,13 @@ class RecipeView extends View {
     window.addEventListener('load', handler);
   }
 
+  addHandlerBookmark(handler) {
+    this._parentEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.recipe__info__bookmark');
+      if (!btn) return;
+      handler();
+    });
+  }
   _generateMarkup() {
     const ingredientsArr = Object.keys(this._data)
       .filter(
@@ -30,49 +37,44 @@ class RecipeView extends View {
       .map((k) => this._data[k]);
 
     let ingredientAndMeasure = [];
-    for (let i = 0; i < ingredientsArr.length; i++) {
+    ingredientsArr.forEach((ing, i) => {
+      const measurement = measureArr[i];
       ingredientAndMeasure.push(
-        `<li class="recipe__ingredients__item">${measureArr[i]} ${ingredientsArr[i]}</li>`
+        `<li class="recipe__ingredients__item">${measurement} ${ing}</li>`
       );
-    }
+    });
+
     return ` 
     <img src="${
       this._data.strMealThumb
     }" alt="recipe thumbnail image" class="recipe__img" />
    
     <div class="recipe__info">
-        <div="recipe__info__title-and-type">
-            <span class="recipe__info__title">${this._data.strMeal}</span>
+        <div class="recipe__info__title-and-type">
+            <h1 class="recipe__info__title">${this._data.strMeal}</h1>
              <span class="recipe__info__type">${this._data.strArea}/${
       this._data.strCategory
     }</span>
         </div>
-        <div class="recipe__info__controller">
-            <div class="recipe__info__portion">
-                <span class="recipe__info__portion-base"><i class="far fa-user"></i> 2 portions</span>
-                <button class="recipe__info__portion-btn plus">+</button>
-                <button class="recipe__info__portion-btn minus">-</button>
-            </div>
-            <div class="recipe__info__custom-bookmark">
-                <span class="recipe__info__custom"><i class="far fa-id-badge"></i></span>
-                <button class="recipe__info_bookmark"><i class="far fa-bookmark"></i></button>
-            </div>
-        </div>
-    </div>
+        <button class="recipe__info__bookmark"><i class="fa${
+          this._data.bookmarked ? 's' : 'r'
+        } fa-bookmark"></i></button>  
+      </div>
+
   <div class="recipe__ingredients">
-    <h1>Recipe Ingredients</h1>
+    <h2>Recipe Ingredients</h2>
     <ul class="recipe__ingredients__list">
     ${ingredientAndMeasure.join('')}
     </ul>
     </div>
     <div class="recipe__instructions">
-    <h1>Instructions</h1>
+    <h2>Instructions</h2>
     <p>
         ${this._data.strInstructions}
     </p>
     <a href="${
       this._data.strYoutube
-    }" class="recipe__instructions__video" target="_black">Watch How To Cook</a>
+    }" class="recipe__instructions__video" target="_black"><i class="far fa-play-circle"></i> Watch How To Cook</a>
   </div>`;
   }
 }
