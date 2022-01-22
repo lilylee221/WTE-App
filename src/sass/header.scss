@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   height: 6rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
   border-radius: var(--basic-radius) var(--basic-radius) 0 0;
 
   &__logo {
@@ -14,25 +14,37 @@
       width: 3rem;
     }
     &__text {
-      font-size: 2rem;
+      font-size: var(--font-large-size);
+      @include respond(mobile) {
+        font-size: var(--font-regular-size);
+      }
     }
   }
 
   &__search {
-    flex: 0 0 40%;
     font-size: var(--font-regular-size);
+    display: flex;
+    justify-content: center;
+
     &__input {
-      width: 17rem;
+      width: 25rem;
       height: 2.5rem;
       border: none;
       border-radius: var(--basic-radius);
       font-size: inherit;
+      font-family: inherit;
       padding: 0.5rem;
+      margin-right: 0.25rem;
+
+      @include respond(mobile) {
+        width: auto;
+      }
     }
     &__btn {
       width: 5rem;
       height: 2.5rem;
       font-size: inherit;
+      font-family: inherit;
     }
   }
 
@@ -47,6 +59,7 @@
     }
     &__btn {
       font-size: inherit;
+      font-family: inherit;
       margin-top: 2.6rem;
       background: transparent;
     }
@@ -56,7 +69,7 @@
       width: 20rem;
       background-color: var(--primary-light-color);
       top: 6rem;
-      right: -2rem;
+      right: -1rem;
       opacity: 0;
       visibility: hidden;
     }

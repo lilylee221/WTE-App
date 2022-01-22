@@ -6,7 +6,8 @@ button {
   padding: 0;
   cursor: pointer;
 }
-button:hover {
+button:hover,
+a:hover {
   transform: translateY(-2px);
 }
 
@@ -18,8 +19,6 @@ a:link,
 a:visited {
   text-decoration: none;
   color: inherit;
-}
-a:hover {
   cursor: pointer;
 }
 

@@ -1,8 +1,8 @@
 .recipe {
   flex: 1;
+  min-height: 100vh;
   background-color: var(--secondary-light-color);
   text-align: center;
-  border-radius: 0 0 var(--basic-radius) 0;
   &__init-message {
     font-size: var(--font-medium-size);
     margin: 7rem;
@@ -20,6 +20,7 @@
       position: absolute;
       top: 0;
       right: 4rem;
+      background-color: transparent;
       font-size: var(--font-large-size);
     }
   }
@@ -33,7 +34,7 @@
     }
     &__item {
       flex-basis: 50%;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
     }
   }
   &__instructions {

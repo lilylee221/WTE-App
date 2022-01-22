@@ -40,7 +40,7 @@ class RecipeView extends View {
     ingredientsArr.forEach((ing, i) => {
       const measurement = measureArr[i];
       ingredientAndMeasure.push(
-        `<li class="recipe__ingredients__item">${measurement} ${ing}</li>`
+        `<li class="recipe__ingredients__item"><i class="fas fa-check"></i> ${measurement} ${ing}</li>`
       );
     });
 
