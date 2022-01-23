@@ -22,4 +22,4 @@
    * Classes
 
 ### App deployment
-wte-lily.netlify.app
+https://wte-lily.netlify.app/
