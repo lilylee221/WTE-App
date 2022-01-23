@@ -12,8 +12,8 @@
  * HTML
  * SASS
  * JavaScript
-  * Fetch API
-  * async/await
-  * MVC
-  * LocalStorage
-  * Classes
+   * Fetch API
+   * async/await
+   * MVC
+   * LocalStorage
+   * Classes
