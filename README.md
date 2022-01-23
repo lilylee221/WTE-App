@@ -20,3 +20,6 @@
    * MVC
    * LocalStorage
    * Classes
+
+### App deployment
+wte-lily.netlify.app
