@@ -4,10 +4,14 @@
   &__pagination {
     position: relative;
     margin-bottom: 2rem;
+
     & button {
       width: 5rem;
       height: 2rem;
       border: 1px solid rgba(0, 0, 0, 0.12);
+      @include respond(tab-port) {
+        font-size: 1rem;
+      }
     }
     &__btn--prev {
       position: absolute;

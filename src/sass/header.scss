@@ -6,10 +6,18 @@
   height: 6rem;
   padding: 0 1rem;
   border-radius: var(--basic-radius) var(--basic-radius) 0 0;
+  @include respond(mobile) {
+    flex-wrap: wrap;
+    height: 7rem;
+    padding: 0.75rem;
+  }
 
   &__logo {
     display: flex;
     align-items: center;
+    @include respond(mobile) {
+      flex-basis: 100%;
+    }
     &__img {
       width: 3rem;
     }
@@ -25,6 +33,11 @@
     font-size: var(--font-regular-size);
     display: flex;
     justify-content: center;
+    @include respond(mobile) {
+      flex-basis: 70%;
+      margin: 0 auto;
+      height: 100%;
+    }
 
     &__input {
       width: 25rem;
@@ -37,7 +50,7 @@
       margin-right: 0.25rem;
 
       @include respond(mobile) {
-        width: auto;
+        width: 100%;
       }
     }
     &__btn {
@@ -52,6 +65,7 @@
     font-size: var(--font-regular-size);
     position: relative;
     height: 100%;
+
     &:hover &__content,
     &__content:hover {
       opacity: 1;
@@ -62,6 +76,9 @@
       font-family: inherit;
       margin-top: 2.6rem;
       background: transparent;
+      @include respond(mobile) {
+        margin-top: 1rem;
+      }
     }
 
     &__content {
@@ -72,6 +89,10 @@
       right: -1rem;
       opacity: 0;
       visibility: hidden;
+      @include respond(mobile) {
+        top: 3.75rem;
+        right: -0.75rem;
+      }
     }
     &__add-recipe {
       margin-right: 1rem;
