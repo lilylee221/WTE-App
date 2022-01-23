@@ -5,8 +5,9 @@ import resultsView from './views/resultsView.js';
 import bookmarksView from './views/bookmarksView.js';
 import paginationView from './views/paginationView.js';
 
-// import 'core-js';
-// import 'regenerator-runtime';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 const recipeEl = document.querySelector('.recipe');
 const listEl = document.querySelector('.recipe-list');
 

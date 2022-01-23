@@ -4,7 +4,8 @@
   "description": "Recipe finder app",
   "main": "index.html",
   "scripts": {
-    "compile:sass": "node-sass src/sass/main.scss src/css/style.css -w"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,17 @@
   },
   "homepage": "https://github.com/lilylee221/WTE-App#readme",
   "devDependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "core-js": "^3.20.3",
     "regenerator-runtime": "^0.13.9"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
 }
