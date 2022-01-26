@@ -22,6 +22,10 @@
       right: 4rem;
       background-color: transparent;
       font-size: var(--font-large-size);
+      @include respond(tab-port) {
+        top: 3rem;
+        right: 4rem;
+      }
     }
   }
 

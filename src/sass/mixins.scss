@@ -12,10 +12,4 @@
       @content;
     }
   }
-  @if $breakpoint == mobile {
-    //tablet-portrait
-    @media only screen and(max-width: 37.5rem) {
-      @content;
-    }
-  }
 }

@@ -6,25 +6,23 @@
   height: 6rem;
   padding: 0 1rem;
   border-radius: var(--basic-radius) var(--basic-radius) 0 0;
-  @include respond(mobile) {
-    flex-wrap: wrap;
-    height: 7rem;
+
+  @include respond(tab-port) {
     padding: 0.75rem;
   }
 
   &__logo {
     display: flex;
     align-items: center;
-    @include respond(mobile) {
-      flex-basis: 100%;
-    }
+
     &__img {
       width: 3rem;
     }
     &__text {
       font-size: var(--font-large-size);
-      @include respond(mobile) {
-        font-size: var(--font-regular-size);
+      @include respond(tab-port) {
+        display: none;
+        overflow: auto;
       }
     }
   }
@@ -33,11 +31,6 @@
     font-size: var(--font-regular-size);
     display: flex;
     justify-content: center;
-    @include respond(mobile) {
-      flex-basis: 70%;
-      margin: 0 auto;
-      height: 100%;
-    }
 
     &__input {
       width: 25rem;
@@ -49,8 +42,8 @@
       padding: 0.5rem;
       margin-right: 0.25rem;
 
-      @include respond(mobile) {
-        width: 100%;
+      @include respond(tab-port) {
+        width: 40vw;
       }
     }
     &__btn {
@@ -74,10 +67,10 @@
     &__btn {
       font-size: inherit;
       font-family: inherit;
-      margin-top: 2.6rem;
+      margin-top: 2.5rem;
       background: transparent;
-      @include respond(mobile) {
-        margin-top: 1rem;
+      @include respond(tab-port) {
+        margin-top: 1.75rem;
       }
     }
 
@@ -86,11 +79,11 @@
       width: 20rem;
       background-color: var(--primary-light-color);
       top: 6rem;
-      right: -1rem;
+      right: -1.05rem;
       opacity: 0;
       visibility: hidden;
-      @include respond(mobile) {
-        top: 3.75rem;
+      @include respond(tab-port) {
+        top: 5.25rem;
         right: -0.75rem;
       }
     }

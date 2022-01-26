@@ -25,11 +25,9 @@ html {
     font-size: 87.5%;
   }
   @include respond(tab-port) {
-    font-size: 62.5%;
+    font-size: 55%;
   }
-  @include respond(mobile) {
-    font-size: 50%;
-  }
+
 }
 
 * {
@@ -43,7 +41,7 @@ body {
 
 .container {
   max-width: 80%;
-  min-height: 100vh;
+  height: fit-content;
   margin: 2rem auto;
   @include respond(tab-land) {
     max-width: 90%;

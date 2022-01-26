@@ -19,11 +19,7 @@
 
 @media only screen and (max-width: 48rem) {
   html {
-    font-size: 62.5%; } }
-
-@media only screen and (max-width: 37.5rem) {
-  html {
-    font-size: 50%; } }
+    font-size: 55%; } }
 
 * {
   margin: 0;
@@ -35,7 +31,7 @@ body {
 
 .container {
   max-width: 80%;
-  min-height: 100vh;
+  height: fit-content;
   margin: 2rem auto; }
   @media only screen and (max-width: 75rem) {
     .container {
@@ -103,33 +99,24 @@ a:visited {
   height: 6rem;
   padding: 0 1rem;
   border-radius: var(--basic-radius) var(--basic-radius) 0 0; }
-  @media only screen and (max-width: 37.5rem) {
+  @media only screen and (max-width: 48rem) {
     .header {
-      flex-wrap: wrap;
-      height: 7rem;
       padding: 0.75rem; } }
   .header__logo {
     display: flex;
     align-items: center; }
-    @media only screen and (max-width: 37.5rem) {
-      .header__logo {
-        flex-basis: 100%; } }
     .header__logo__img {
       width: 3rem; }
     .header__logo__text {
       font-size: var(--font-large-size); }
-      @media only screen and (max-width: 37.5rem) {
+      @media only screen and (max-width: 48rem) {
         .header__logo__text {
-          font-size: var(--font-regular-size); } }
+          display: none;
+          overflow: auto; } }
   .header__search {
     font-size: var(--font-regular-size);
     display: flex;
     justify-content: center; }
-    @media only screen and (max-width: 37.5rem) {
-      .header__search {
-        flex-basis: 70%;
-        margin: 0 auto;
-        height: 100%; } }
     .header__search__input {
       width: 25rem;
       height: 2.5rem;
@@ -139,9 +126,9 @@ a:visited {
       font-family: inherit;
       padding: 0.5rem;
       margin-right: 0.25rem; }
-      @media only screen and (max-width: 37.5rem) {
+      @media only screen and (max-width: 48rem) {
         .header__search__input {
-          width: 100%; } }
+          width: 40vw; } }
     .header__search__btn {
       width: 5rem;
       height: 2.5rem;
@@ -157,22 +144,22 @@ a:visited {
     .header__bookmarks__btn {
       font-size: inherit;
       font-family: inherit;
-      margin-top: 2.6rem;
+      margin-top: 2.5rem;
       background: transparent; }
-      @media only screen and (max-width: 37.5rem) {
+      @media only screen and (max-width: 48rem) {
         .header__bookmarks__btn {
-          margin-top: 1rem; } }
+          margin-top: 1.75rem; } }
     .header__bookmarks__content {
       position: absolute;
       width: 20rem;
       background-color: var(--primary-light-color);
       top: 6rem;
-      right: -1rem;
+      right: -1.05rem;
       opacity: 0;
       visibility: hidden; }
-      @media only screen and (max-width: 37.5rem) {
+      @media only screen and (max-width: 48rem) {
         .header__bookmarks__content {
-          top: 3.75rem;
+          top: 5.25rem;
           right: -0.75rem; } }
     .header__bookmarks__add-recipe {
       margin-right: 1rem; }
@@ -235,6 +222,10 @@ a:visited {
       right: 4rem;
       background-color: transparent;
       font-size: var(--font-large-size); }
+      @media only screen and (max-width: 48rem) {
+        .recipe__info__bookmark {
+          top: 3rem;
+          right: 4rem; } }
   .recipe__ingredients {
     text-align: center;
     margin: 2rem; }
