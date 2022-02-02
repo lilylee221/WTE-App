@@ -8,7 +8,10 @@
   border-radius: var(--basic-radius) var(--basic-radius) 0 0;
 
   @include respond(tab-port) {
-    padding: 0.75rem;
+    padding: 2.75rem;
+    flex-wrap: wrap;
+    height: 10rem;
+    align-content: center;
   }
 
   &__logo {
@@ -20,20 +23,22 @@
     }
     &__text {
       font-size: var(--font-large-size);
-      @include respond(tab-port) {
-        display: none;
-        overflow: auto;
-      }
     }
   }
 
   &__search {
     font-size: var(--font-regular-size);
+    flex: 0 0 60%;
     display: flex;
     justify-content: center;
+    @include respond(tab-port) {
+      order: 1;
+      flex: 0 0 100%;
+      width: 100%;
+    }
 
     &__input {
-      width: 25rem;
+      flex: 1;
       height: 2.5rem;
       border: none;
       border-radius: var(--basic-radius);
@@ -41,9 +46,8 @@
       font-family: inherit;
       padding: 0.5rem;
       margin-right: 0.25rem;
-
       @include respond(tab-port) {
-        width: 40vw;
+        max-width: 36rem;
       }
     }
     &__btn {
@@ -57,7 +61,6 @@
   &__bookmarks {
     font-size: var(--font-regular-size);
     position: relative;
-    height: 100%;
 
     &:hover &__content,
     &__content:hover {
@@ -67,10 +70,10 @@
     &__btn {
       font-size: inherit;
       font-family: inherit;
-      margin-top: 2.5rem;
+      margin-top: 0.4rem;
       background: transparent;
       @include respond(tab-port) {
-        margin-top: 1.75rem;
+        margin-top: -0.25rem;
       }
     }
 
@@ -78,13 +81,13 @@
       position: absolute;
       width: 20rem;
       background-color: var(--primary-light-color);
-      top: 6rem;
+      top: 3.8rem;
       right: -1.05rem;
       opacity: 0;
       visibility: hidden;
       @include respond(tab-port) {
-        top: 5.25rem;
-        right: -0.75rem;
+        top: 6.75rem;
+        right: -2.75rem;
       }
     }
     &__add-recipe {
